@@ -8,6 +8,14 @@
 </head>
 <body>
 
+<% if current_user %>
+  Salut <%= current_user.email %>
+<% else %>
+  <%= link_to 'Sign in', new_user_session_path %> | <%= link_to 'Sign up', new_user_registration_path %>
+<% end %>
+
+<%= content_tag(:div, alert,  class: 'alert')  if alert %>
+<%= content_tag(:div, notice, class: 'notice') if notice %>
 <%= yield %>
 
 </body>
