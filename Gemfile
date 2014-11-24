@@ -29,6 +29,12 @@ gem 'spring',        group: :development
 # Authentification
 gem 'devise'
 
+# Permission
+gem 'cancancan'
+
+# Role
+gem 'rolify'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
