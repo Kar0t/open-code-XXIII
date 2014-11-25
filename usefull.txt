@@ -1,0 +1,4 @@
+git rebase -i d352c5210c75265cd89dbf3a6d9d04f0eee0eb22
+
+git diff HEAD..HEAD~1 --name-only
+
