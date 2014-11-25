@@ -31,8 +31,10 @@ class Ability
 
     user ||= User.new
 
+    can :read, Post
+
     if user.has_role? :user
-        can [:read, :create], Post
+        can [:create], Post
         can [:edit], user.posts
     elsif user.has_role? :moderator
         can [:read, :create, :edit], Post
